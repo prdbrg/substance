@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div class="content-text">
+	<article class="single-blogpost">
+			<div class="single-blogpost-date">{{ page.date | date_to_string }}</div>
+			<div class='title-and-share-container'>
+				<div class="single-blogpost-title">{{ page.title }}</div>
+				{% include toolbar.html %}
+			</div>
+			<p>{% if page.excerpt %}{{ page.excerpt }}{% endif %}</p>
+		{{ content }}
+	</article>
+</div>

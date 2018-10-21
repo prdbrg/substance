@@ -1,0 +1,43 @@
+.single-project {
+  img {
+    margin: 1.6em auto;
+    display: block;
+    width: 100%;
+    border: 0.5px solid $grey-light;
+  }
+}
+
+.title-and-share-container {
+  margin: 20px auto 30px auto;
+  display: flex;
+}
+
+.single-project-title {
+  font-weight: $font-weight-bold;
+  margin: auto auto auto 0;
+  text-align: left;
+}
+
+.toolbar {
+  width: 116px;
+}
+
+.toolbar a {
+  font-size: 1.1em;
+  color: $grey-dark;
+	text-align:right;
+  transition: all .25s ease-in-out;
+  -webkit-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
+}
+
+.toolbar a:hover {
+  color: $accent-color;
+}
+
+.toolbar-element {
+  display: inline-block;
+  margin-left: 20px;
+  cursor: pointer;
+}

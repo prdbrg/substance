@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<div class="content-text">
+	<article class="single-project">
+		<div class='title-and-share-container'>
+			<div class="single-project-title">{{ page.title }}</div>
+			{% include toolbar.html %}
+		</div>
+		<p>{% if page.excerpt %}{{ page.excerpt }}{% endif %}</p>
+	{% if page.video %}
+			<video controls poster="{{ site.imagesurl | append: page.cover_image | absolute_url }}" >
+				<source src="{{ site.videosurl | append: page.video | append: '.webm' | absolute_url | escape }}" type="video/webm">
+				<source src="{{ site.videosurl | append: page.video | append: '.mp4' | absolute_url | escape }}" type="video/mp4">
+				Sorry, your browser does not support the video tag. Please update to see this content.
+			</video>
+	{% else %}
+			<a href="{{ page.project_url }}" target="_blank">
+				<img src="{{ site.imagesurl | append: page.cover_image | absolute_url }}" alt="{{ page.title }}" />
+			</a>
+	{% endif %}
+		{{ content }}
+	</article>
+</div>
