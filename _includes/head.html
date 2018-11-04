@@ -12,7 +12,7 @@
   {% if page.cover_image %}
     {% assign image = site.imagesurl | append: page.cover_image | absolute_url %}
   {% else %}
-    {% assign image = site.assetsurl | append: "profile.png" | absolute_url %}
+    {% assign image = site.assetsurl | append: "profile.jpg" | absolute_url %}
   {% endif %}
 
   <title>{{ title | default: site.title | strip_html | escape }}</title>
