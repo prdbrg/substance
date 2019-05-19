@@ -6,7 +6,7 @@
   {% if page.title == 'Home' %}
     {% assign title = site.title %}
   {% else %}
-    {% assign title = site.title | append: " | " | append: page.title | strip_html | escape %}
+    {% assign title = page.title | append: " - " | append: site.title | strip_html %}
   {% endif %}
 
   {% if page.cover_image %}
