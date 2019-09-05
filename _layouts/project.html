@@ -8,12 +8,10 @@ layout: default
 			{% include toolbar.html %}
 		</div>
 		<p>{% if page.excerpt %}{{ page.excerpt }}{% endif %}</p>
-	{% if page.video %}
-			<video controls poster="{{ site.imagesurl | append: page.cover_image | absolute_url }}" >
-				<source src="{{ site.videosurl | append: page.video | append: '.webm' | absolute_url | escape }}" type="video/webm">
-				<source src="{{ site.videosurl | append: page.video | append: '.mp4' | absolute_url | escape }}" type="video/mp4">
-				Sorry, your browser does not support the video tag. Please update to see this content.
-			</video>
+	{% if page.videoID %}
+		<div class="video-wrapper">
+			<iframe src="https://www.dailymotion.com/embed/video/{{ page.videoID }}?queue-enable=false&queue-autoplay-next=false&ui-start-screen-info=false" allowfullscreen ></iframe>
+		</div>
 	{% else %}
 			<a href="{{ page.project_url }}" target="_blank">
 				<img src="{{ site.imagesurl | append: page.cover_image | absolute_url }}" alt="{{ page.title }}" />
