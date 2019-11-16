@@ -5,7 +5,7 @@ layout: default
 	<article class="single-blogpost">
 			<div class="single-blogpost-date">{{ page.date | date_to_string }}</div>
 			<div class='title-and-share-container'>
-				<div class="single-blogpost-title">{{ page.title }}</div>
+				<div class="single-blogpost-title"><h1>{{ page.title }}</h1></div>
 				{% include toolbar.html %}
 			</div>
 			<p>{% if page.excerpt %}{{ page.excerpt }}{% endif %}</p>
