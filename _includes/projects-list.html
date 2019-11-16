@@ -2,9 +2,9 @@
 {% for post in include.elements %}
   <article class="home-project-element">
     <a class="home-project-link" href="{{ post.url | absolute_url }}">
-      <img class="home-project-image" src="{{ site.imagesurl | append: post.cover_image | absolute_url }}" />
+      <img class="home-project-image" src="{{ site.imagesurl | append: post.cover_image | absolute_url }}" alt="{{ post.title }}" />
       <div class="home-project-infos">
-        <div class="home-project-title">{{ post.title }}</div>
+        <h1><div class="home-project-title">{{ post.title }}</div></h1>
         <div class="home-project-excerpt">{{ post.excerpt | truncate: 160 }}</div>
       </div>
     </a>
