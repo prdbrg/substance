@@ -10,8 +10,7 @@ layout: default
 		<p>{% if page.excerpt %}{{ page.excerpt }}{% endif %}</p>
 	{% if page.videoID %}
 		<div class="video-wrapper">
-			<script src="https://cdn.dailymotion.com/player.js" data-video="{{ page.videoID }}"> </script>
-			<!-- <iframe src="https://www.dailymotion.com/embed/video/{{ page.videoID }}?queue-enable=false&queue-autoplay-next=false&ui-start-screen-info=false" allowfullscreen ></iframe> -->
+			<script src="https://cdn.dailymotion.com/player.js" data-video="{{ page.videoID }}" data-params="enableQueue=false"> </script>
 		</div>
 	{% else %}
 			<a href="{{ page.project_url }}" target="_blank">
