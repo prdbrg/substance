@@ -10,7 +10,7 @@ layout: default
 		<p>{% if page.excerpt %}{{ page.excerpt }}{% endif %}</p>
 	{% if page.videoID %}
 		<div class="video-wrapper">
-			<script src="https://geo.dailymotion.com/xkp.js" data-video="{{page.videoID}}"> </script>
+			<script src="https://geo.dailymotion.com/player/xkp.js" data-video="{{page.videoID}}"> </script>
 		</div>
 	{% else %}
 			<a href="{{ page.project_url }}" target="_blank">
